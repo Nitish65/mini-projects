@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Epic Tales: Ramayana, Mahabharata &amp; Tenali Ramakrishna</title>
+  
+  <link rel="stylesheet" href="epics.css">
+  
+</head>
+<body>
+  <!-- ---------- Top Navigation ---------- -->
+  <nav>
+    <ul>
+      <li><a href="#" class="nav-item active" data-target="home">Home</a></li>
+      <li><a href="#" class="nav-item" data-target="ramayana">Ramayana</a></li>
+      <li><a href="#" class="nav-item" data-target="mahabharata">Mahabharata</a></li>
+      <li><a href="#" class="nav-item" data-target="tenali">Tenali Ramakrishna</a></li>
+    </ul>
+  </nav>
+
+  <!-- ---------- Home Page ---------- -->
+  <div id="home" class="page active-page">
+    <header>
+      <h1>Epic Tales</h1>
+      <p>Explore the timeless epics of India and the witty short stories of Tenali Ramakrishna.</p>
+    </header>
+    <div style="text-align: center;">
+      <button onclick="showPage('ramayana')">Go to Ramayana</button>
+      <button onclick="showPage('mahabharata')">Go to Mahabharata</button>
+      <button onclick="showPage('tenali')">Go to Tenali Ramakrishna</button>
+    </div>
+  </div>
+
+  <!-- ---------- Ramayana Page ---------- -->
+  <div id="ramayana" class="page">
+    <header>
+      <h1>Ramayana</h1>
+      <p>The timeless journey of Lord Rama—his divine birth, royal challenges, and heroic adventures.</p>
+    </header>
+    <div class="language-buttons">
+      <button onclick="translateEpic('ramayana', 'en')">English</button>
+      <button onclick="translateEpic('ramayana', 'te')">తెలుగు</button>
+      <button onclick="translateEpic('ramayana', 'hi')">हिंदी</button>
+    </div>
+    <div class="epic-container">
+      <!-- ---------- Left Sidebar TOC ---------- -->
+      <div class="epic-toc">
+        <ul>
+          <li><a onclick="openChapter('ramayana-balakanda')" href="#">Balakanda</a></li>
+          <li><a onclick="openChapter('ramayana-ayodhyakanda')" href="#">Ayodhyakanda</a></li>
+          <li><a onclick="openChapter('ramayana-aranyakanda')" href="#">Aranyakanda</a></li>
+          <li><a onclick="showAllChapters('ramayana')" href="#">Show All Chapters</a></li>
+        </ul>
+      </div>
+      <!-- ---------- Main Content Area ---------- -->
+      <div class="epic-content">
+        <!-- Balakanda: Complete Story -->
+        <div class="chapter" id="ramayana-balakanda" data-chapter="balakanda">
+          <h3 onclick="toggleChapter(this)">Balakanda: The Childhood of Rama</h3>
+          <div class="chapter-content">
+            <p>
+              In the ancient kingdom of Ayodhya, King Dasharatha, burdened by sorrow and longing for an heir, performed grand yajñas. The sacred fires and celestial omens foretold the divine arrival of a soul destined for greatness. When Rama was born, the court was filled with awe and reverence, as the newborn child radiated an aura of divinity and virtue.
+            </p>
+            <p>
+              As Rama grew, his childhood was not only a time of playful innocence but also a period of rigorous training in dharma (righteousness), martial skills, and compassion. His interactions with his brothers, mentors, and the people of Ayodhya painted a vivid picture of courage blended with humility. The divine signs accompanying his early years promised that he would be the avenger of adharma and the protector of truth.
+            </p>
+            <p>
+              Stories of his simple yet profound deeds—from helping a grieving villager to rescuing a straying animal—spread throughout the kingdom. These episodes, narrated in hushed tones by the royal sages, became the cornerstone of an epic that would inspire millions over the ages.
+            </p>
+          </div>
+        </div>
+        <!-- Ayodhyakanda: Complete Story -->
+        <div class="chapter" id="ramayana-ayodhyakanda" data-chapter="ayodhyakanda">
+          <h3 onclick="toggleChapter(this)">Ayodhyakanda: The Trials of Royal Duty</h3>
+          <div class="chapter-content">
+            <p>
+              As Rama matured, the grandeur and the intricacies of palace life at Ayodhya became evident. Amid political intrigues and the delicate balance of duty, Rama was thrust into trials that tested his commitment to dharma. His conduct, measured by wisdom and compassion, was repeatedly put to the test by familial disputes and the expectations of a restless court.
+            </p>
+            <p>
+              In one memorable episode, a crisis involving a trusted minister led to a sequence of events that revealed both the strength and vulnerability of his character. Rama’s unwavering sense of justice, coupled with his deep empathy, ensured that every decision was tempered with fairness, even when it meant making personal sacrifices.
+            </p>
+            <p>
+              The tales of these trials resonated deeply with the people of Ayodhya. They saw in Rama not only a king in the making but a leader who embodied the highest ideals of righteousness, setting an example for generations to come.
+            </p>
+          </div>
+        </div>
+        <!-- Aranyakanda: Complete Story -->
+        <div class="chapter" id="ramayana-aranyakanda" data-chapter="aranyakanda">
+          <h3 onclick="toggleChapter(this)">Aranyakanda: The Forest Exile</h3>
+          <div class="chapter-content">
+            <p>
+              Fate took a dramatic turn when Rama, along with his beloved wife Sita and loyal brother Lakshmana, was exiled to the forest. The lush, mysterious woods became the backdrop for trials that transcended the boundaries of mortal experience. In the solitude of nature, every rustling leaf and murmur of the wind carried a message of destiny.
+            </p>
+            <p>
+              During this period, Rama encountered sages, vanaras, and even demons. Each episode in the forest forged his resolve, and his encounters with the mystic and the mundane further deepened his understanding of dharma. The serenity of the forest was interwoven with challenges—moments of introspection, conflicts with formidable foes, and alliances with nature’s own protectors.
+            </p>
+            <p>
+              This phase of his life, immortalized in the Aranyakanda, became a beacon of hope for those who believed that truth and duty could triumph even in the harshest of circumstances.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="scrollTopBtn" onclick="scrollToTop()" id="scrollTop-ramayana">↑</button>
+  </div>
+
+  <!-- ---------- Mahabharata Page ---------- -->
+  <div id="mahabharata" class="page">
+    <header>
+      <h1>Mahabharata</h1>
+      <p>An epic saga of cosmic destiny and human endeavor—a chronicle where valor, intrigue, and fate intertwine.</p>
+    </header>
+    <div class="language-buttons">
+      <button onclick="translateEpic('mahabharata', 'en')">English</button>
+      <button onclick="translateEpic('mahabharata', 'te')">తెలుగు</button>
+      <button onclick="translateEpic('mahabharata', 'hi')">हिंदी</button>
+    </div>
+    <div class="epic-container">
+      <div class="epic-toc">
+        <ul>
+          <li><a onclick="openChapter('mahabharata-adiparva')" href="#">Adi Parva</a></li>
+          <li><a onclick="openChapter('mahabharata-sabhaparva')" href="#">Sabha Parva</a></li>
+          <li><a onclick="openChapter('mahabharata-vanaparva')" href="#">Vana Parva</a></li>
+          <li><a onclick="showAllChapters('mahabharata')" href="#">Show All Chapters</a></li>
+        </ul>
+      </div>
+      <div class="epic-content">
+        <!-- Adi Parva: Complete Story -->
+        <div class="chapter" id="mahabharata-adiparva" data-chapter="adiparva">
+          <h3 onclick="toggleChapter(this)">Adi Parva: The Genesis of the Epic</h3>
+          <div class="chapter-content">
+            <p>
+              The Adi Parva sets the stage for the Mahabharata—it is a sweeping prelude that explains the origins of the great Kuru dynasty and the cosmic forces that have conspired since time immemorial. Ancient seers foretold of a struggle between righteousness and chaos, laying down a blueprint that would manifest in the lives of mortal heroes.
+            </p>
+            <p>
+              In these early verses, celestial visions, divine interventions, and age‑old prophecies converge as royal lineages are established. The narratives recount the exploits of forefathers whose choices, steeped in virtue and faltering moments alike, shaped the destiny of the land.
+            </p>
+            <p>
+              Through elaborate rituals, manifold sacrifices, and mysterious omens, the Adi Parva carves out a realm where fate is both predetermined and continuously forged by the valiant souls who dare to challenge it.
+            </p>
+          </div>
+        </div>
+        <!-- Sabha Parva: Complete Story -->
+        <div class="chapter" id="mahabharata-sabhaparva" data-chapter="sabhaparva">
+          <h3 onclick="toggleChapter(this)">Sabha Parva: The Royal Assembly</h3>
+          <div class="chapter-content">
+            <p>
+              In the grand courts of Hastinapura, political intrigue and personal ambition came to a head in the Sabha Parva. A dazzling assembly of kings, ministers, and warriors bore witness to alliances being sealed and rivalries kindled. Here, the intricate subtleties of power and honor were displayed in full, laying bare the human frailties and strengths that would define the epic struggle.
+            </p>
+            <p>
+              Amid sumptuous feasts, eloquent debates, and covert conspiracies, the seeds of future discord were sown. Every gesture, every word in this stately assembly resonated with the weight of destiny, hinting at the monumental events that were yet to unfold.
+            </p>
+            <p>
+              The Sabha Parva, with its blend of regal pomp and subtle deception, achieved more than a mere gathering—it became an epoch in itself, a microcosm of the Mahabharata’s eternal conflict between dharma and adharma.
+            </p>
+          </div>
+        </div>
+        <!-- Vana Parva: Complete Story -->
+        <div class="chapter" id="mahabharata-vanaparva" data-chapter="vanaparva">
+          <h3 onclick="toggleChapter(this)">Vana Parva: The Exile in the Forest</h3>
+          <div class="chapter-content">
+            <p>
+              Exiled from their palatial homes, the protagonists of the Mahabharata were consigned to the deep, enigmatic forests. The Vana Parva unfolds as a period of introspection, conflict, and growth as the heroes encountered not only formidable natural elements but also the inner demons that every soul must confront.
+            </p>
+            <p>
+              In this wilderness, life assumed a raw and elemental form. The harsh, unyielding terrain became both a crucible and a sanctuary—a setting where lessons of resilience, repentance, and redemption were etched into the hearts of its exiles.
+            </p>
+            <p>
+              Every trek, every encounter in the forest underscored the inexorable march of fate. The Vana Parva thus remains a timeless reminder of humanity’s perpetual struggle against destiny and the forces of nature.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="scrollTopBtn" onclick="scrollToTop()" id="scrollTop-mahabharata">↑</button>
+  </div>
+
+  <!-- ---------- Tenali Ramakrishna Page ---------- -->
+  <div id="tenali" class="page">
+    <header>
+      <h1>Tenali Ramakrishna</h1>
+      <p>Delight in the clever short stories of Tenali Ramakrishna, whose wit and humor enchanted courts and commoners alike.</p>
+    </header>
+    <div class="language-buttons">
+      <button onclick="translateEpic('tenali', 'en')">English</button>
+      <button onclick="translateEpic('tenali', 'te')">తెలుగు</button>
+      <button onclick="translateEpic('tenali', 'hi')">हिंदी</button>
+    </div>
+    <div class="epic-container">
+      <div class="epic-toc">
+        <ul>
+          <li><a onclick="openChapter('tenali-story1')" href="#">The Mango Trick</a></li>
+          <li><a onclick="openChapter('tenali-story2')" href="#">The Rice Story</a></li>
+          <li><a onclick="openChapter('tenali-story3')" href="#">The Clever Judge</a></li>
+          <li><a onclick="showAllChapters('tenali')" href="#">Show All Stories</a></li>
+        </ul>
+      </div>
+      <div class="epic-content">
+        <!-- The Mango Trick: Complete Story -->
+        <div class="chapter" id="tenali-story1" data-chapter="mangotrick">
+          <h3 onclick="toggleChapter(this)">The Mango Trick</h3>
+          <div class="chapter-content">
+            <p>
+              In a bustling court, Tenali Ramakrishna once proposed a clever plan using a basket of ripened mangoes. The king, perplexed by a seemingly unsolvable dilemma, found humor and wisdom in Tenali’s demonstration of how even the simplest fruit could unveil hidden truths.
+            </p>
+            <p>
+              With a mischievous glint in his eye, Tenali arranged the mangoes in a pattern that, when observed closely, revealed a subtle message about justice and resourcefulness. The courtiers were left both amused and inspired as the trick not only solved the problem at hand but also taught a valuable lesson.
+            </p>
+            <p>
+              This enchanting tale, with its blend of wit and sagacity, became one of many stories that immortalized Tenali as a master of humor and intelligence.
+            </p>
+          </div>
+        </div>
+        <!-- The Rice Story: Complete Story -->
+        <div class="chapter" id="tenali-story2" data-chapter="ricestory">
+          <h3 onclick="toggleChapter(this)">The Rice Story</h3>
+          <div class="chapter-content">
+            <p>
+              In another curious episode, Tenali Ramakrishna turned a modest sack of rice into a lesson on abundance and fairness. Faced with a dispute over a meager resource, Tenali’s ingenious idea transformed a simple commodity into a metaphor for life’s greater mysteries.
+            </p>
+            <p>
+              His method was both humorous and profound—demonstrating that even the most ordinary items, when seen through the lens of creativity, could become instruments of wisdom. The entire court marveled at how a trivial bag of rice could shed light on issues of greed and generosity, leaving everyone with a newfound perspective.
+            </p>
+            <p>
+              The Rice Story became a celebrated tale, echoing through generations as a reminder of the transformative power of clever insight.
+            </p>
+          </div>
+        </div>
+        <!-- The Clever Judge: Complete Story -->
+        <div class="chapter" id="tenali-story3" data-chapter="cleverjudge">
+          <h3 onclick="toggleChapter(this)">The Clever Judge</h3>
+          <div class="chapter-content">
+            <p>
+              When a dispute erupted in the royal court over a seemingly unsolvable case, Tenali Ramakrishna was called upon to settle the matter. His unconventional approach to justice, marked by a blend of humor and shrewd reasoning, astounded everyone present.
+            </p>
+            <p>
+              By carefully listening to both sides and then posing a series of incisive questions, Tenali revealed the truth in a manner that was both entertaining and deeply just. His verdict not only restored harmony in the court but also left an indelible mark on all who witnessed his brilliant reasoning.
+            </p>
+            <p>
+              The story of the Clever Judge became a timeless testament to the idea that wisdom and wit, when combined, can transform conflict into clarity.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="scrollTopBtn" onclick="scrollToTop()" id="scrollTop-tenali">↑</button>
+  </div>
+
+  <!-- ---------- Footer ---------- -->
+  <footer style="text-align: center; margin-top: 20px;">
+    <p>© 2023 Epic Tales</p>
+  </footer>
+
+  
+  <script src="epics.js"></script>
+</body>
+</html>
