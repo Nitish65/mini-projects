@@ -1,0 +1,116 @@
+/* ---------- Global Reset & Base Styles ---------- */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: Arial, sans-serif; 
+      line-height: 1.6; 
+      background: #f4f4f4; 
+      color: #333; 
+      padding: 20px; 
+    }
+    /* ---------- Top Navigation Bar ---------- */
+    nav {
+      margin-bottom: 20px;
+      background: #333;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+    nav ul li a {
+      display: block;
+      padding: 15px 20px;
+      color: #fff;
+      text-decoration: none;
+    }
+    nav ul li a:hover, nav ul li a.active {
+      background: #555;
+    }
+
+    
+    
+    /* ---------- Page Sections ---------- */
+    .page { display: none; }
+    .active-page { display: block; }
+    header { text-align: center; margin-bottom: 20px; }
+    .language-buttons {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    .language-buttons button {
+      background: #0066cc;
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      margin: 0 5px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .language-buttons button:hover { background: #004999; }
+    /* ---------- Layout for Epic Pages (Sidebar + Content) ---------- */
+    .epic-container {
+      display: flex;
+      gap: 20px;
+    }
+    .epic-toc {
+      flex: 0 0 220px;
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 10px;
+      position: sticky;
+      top: 20px;
+      height: calc(100vh - 40px);
+      overflow-y: auto;
+    }
+    .epic-toc ul { list-style: none; }
+    .epic-toc ul li {
+      margin: 8px 0;
+    }
+    .epic-toc ul li a {
+      color: #0066cc;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .epic-toc ul li a:hover { text-decoration: underline; }
+    .epic-content {
+      flex: 1;
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 10px;
+    }
+    /* ---------- Chapter Styling ---------- */
+    .chapter {
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      background: #f9f9f9;
+    }
+    .chapter h3 {
+      background: #eee;
+      padding: 10px;
+      cursor: pointer;
+    }
+    .chapter-content { padding: 10px; }
+    /* ---------- Scroll-to-Top Button ---------- */
+    .scrollTopBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: none;
+      background: #333;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    /* ---------- Responsive Adjustments ---------- */
+    @media (max-width: 768px) {
+      .epic-container {
+        flex-direction: column;
+      }
+      .epic-toc {
+        position: relative;
+        height: auto;
+        max-width: 100%;
+      }
+    }
